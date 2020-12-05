@@ -1,59 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/product_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="59dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Название товара"
-        app:layout_constraintBottom_toTopOf="@+id/product_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="150dp"
+        android:alpha="0.9"
+        android:background="#3000"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/product_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Номер товара"
-        app:layout_constraintBottom_toTopOf="@+id/add"
-        app:layout_constraintStart_toStartOf="@+id/product_name"
-        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:alpha="1"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="false"
+            android:scaleType="center"
+            app:srcCompat="@mipmap/nfc_"/>
 
-    <Button
-        android:id="@+id/add"
-        android:layout_width="143dp"
-        android:layout_height="0dp"
-        android:background="#E57373"
-        android:onClick="onClick"
-        android:text="Добавить"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_id"
-        app:rippleColor="#FFFFFF" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="143dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="482dp"
-        android:onClick="onClick"
-        android:text="Удалить"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add" />
+            <TextView
+                android:id="@+id/ViewText"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:alpha="1"
+                android:ems="10"
+                android:text="@string/header_read"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/IdLabel"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:alpha="1"
+                    android:ems="10"
+                    android:text="@string/label_id"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/IdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:alpha="1"
+                    android:ems="10"
+                    android:text=""
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
