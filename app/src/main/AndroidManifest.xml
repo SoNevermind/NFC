@@ -3,7 +3,6 @@
     package="com.example.nfc">
     
     <uses-permission android:name="android.permission.NFC"/>
-    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
 
     <application
         android:allowBackup="true"
@@ -12,19 +11,13 @@
         android:roundIcon="@mipmap/nfc_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NFC">
-        <activity android:name=".MainActivity" android:launchMode="singleTop">
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="com.example.nfc.NFCREAD" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.example.nfc.NFCWRITE"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.example.nfc.VERSION"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>
