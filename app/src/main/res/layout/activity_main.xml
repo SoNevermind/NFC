@@ -43,7 +43,7 @@
                 android:text="@string/header_read"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
@@ -62,7 +62,7 @@
                     android:text="@string/label_id"
                     android:textAlignment="textStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="22sp"
                     android:textStyle="bold"/>
 
